@@ -1,4 +1,4 @@
-"""RRT pathfinding in continuous 2D occupancy space."""
+"""Поиск пути RRT в непрерывном двумерном пространстве."""
 
 from __future__ import annotations
 
@@ -46,7 +46,7 @@ def rrt_search(
     goal_radius: float = 5.0,
     max_iter: int = 5000,
 ) -> tuple[Optional[list[tuple[float, float]]], list[tuple[tuple[float, float], tuple[float, float]]]]:
-    """Run RRT and return path and tree edges."""
+    """Запустить RRT и вернуть путь и рёбра дерева."""
     if not _is_free(grid, start[0], start[1]) or not _is_free(grid, goal[0], goal[1]):
         return None, []
 

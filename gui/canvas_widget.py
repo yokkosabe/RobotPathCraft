@@ -1,4 +1,4 @@
-"""Matplotlib canvas widget for map and trajectory visualization."""
+"""Виджет Matplotlib для визуализации карты и траектории."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from PyQt6.QtWidgets import QVBoxLayout, QWidget
 
 
 class CanvasWidget(QWidget):
-    """Interactive plotting area with click-to-set points."""
+    """Интерактивная область построения с установкой точек кликом."""
 
     point_clicked = pyqtSignal(int, int)
 
@@ -41,7 +41,7 @@ class CanvasWidget(QWidget):
         rrt_edges=None,
         show_rrt_tree: bool = True,
     ) -> None:
-        """Render map and route elements."""
+        """Отрисовка карты и элементов маршрута."""
         self.ax.clear()
         self.ax.set_facecolor("#f2f4f8")
         self.ax.imshow(grid, cmap="Greys", origin="upper", alpha=0.95)

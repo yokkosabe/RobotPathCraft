@@ -1,4 +1,4 @@
-"""Load occupancy map from JSON files."""
+"""Загрузка карты занятости из JSON-файлов."""
 
 import json
 from pathlib import Path
@@ -9,7 +9,7 @@ from map_loader import MapData
 
 
 def load_json_map(path: str) -> MapData:
-    """Load map from JSON with width/height/obstacles/start/goal."""
+    """Загрузить карту из JSON со структурой width/height/obstacles/start/goal."""
     data = json.loads(Path(path).read_text(encoding="utf-8"))
     width = int(data["width"])
     height = int(data["height"])

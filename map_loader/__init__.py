@@ -1,4 +1,4 @@
-"""Map loading utilities for RobotPathCraft."""
+"""Утилиты загрузки карт для RobotPathCraft."""
 
 from dataclasses import dataclass
 from typing import Optional
@@ -8,8 +8,8 @@ import numpy as np
 
 @dataclass
 class MapData:
-    """Container for occupancy map and optional start/goal points."""
+    """Контейнер для сетки занятости и необязательных точек старта/цели."""
 
-    grid: np.ndarray  # 2D array: 0 free, 1 obstacle
+    grid: np.ndarray  # Двумерная матрица: 0 — свободно, 1 — препятствие
     start: Optional[tuple[int, int]] = None
     goal: Optional[tuple[int, int]] = None

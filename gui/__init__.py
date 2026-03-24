@@ -1,1 +1,1 @@
-"""GUI package for RobotPathCraft."""
+"""Пакет графического интерфейса RobotPathCraft."""

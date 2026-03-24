@@ -1,4 +1,4 @@
-"""Control panel with all trajectory parameters."""
+"""Панель управления со всеми параметрами траектории."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ from PyQt6.QtWidgets import (
 
 
 class ControlPanel(QWidget):
-    """Left panel with map loading and algorithm controls."""
+    """Левая панель с загрузкой карты и параметрами алгоритма."""
 
     def __init__(self, parent: QWidget | None = None) -> None:
         super().__init__(parent)

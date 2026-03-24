@@ -1,4 +1,4 @@
-"""Main window for RobotPathCraft application."""
+"""Главное окно приложения RobotPathCraft."""
 
 from __future__ import annotations
 
@@ -34,7 +34,7 @@ from map_loader.json_loader import load_json_map
 
 
 class PlannerWorker(QObject):
-    """Background worker for path computation."""
+    """Фоновый обработчик для расчёта пути."""
 
     finished = pyqtSignal(dict)
     failed = pyqtSignal(str)
@@ -84,7 +84,7 @@ class PlannerWorker(QObject):
 
 
 class MainWindow(QMainWindow):
-    """Main application window with controls and visualization."""
+    """Основное окно с элементами управления и визуализацией."""
 
     def __init__(self) -> None:
         super().__init__()

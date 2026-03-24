@@ -1,4 +1,4 @@
-"""Path smoothing and simple geometric utilities."""
+"""Сглаживание пути и простые геометрические утилиты."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ import numpy as np
 
 
 def line_of_sight(grid: np.ndarray, a: tuple[float, float], b: tuple[float, float]) -> bool:
-    """Check whether line segment does not intersect obstacles."""
+    """Проверить, что отрезок не пересекает препятствия."""
     steps = max(2, int(math.hypot(b[0] - a[0], b[1] - a[1]) * 2))
     h, w = grid.shape
     for i in range(steps + 1):
@@ -23,7 +23,7 @@ def line_of_sight(grid: np.ndarray, a: tuple[float, float], b: tuple[float, floa
 
 
 def shortcut_smooth(grid: np.ndarray, path: list[tuple[float, float]]) -> list[tuple[float, float]]:
-    """Remove intermediate points where direct visibility exists."""
+    """Удалить промежуточные точки при наличии прямой видимости."""
     if len(path) <= 2:
         return path
     smoothed = [path[0]]

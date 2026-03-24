@@ -1,1 +1,1 @@
-"""Analysis and recommendation modules."""
+"""Модули анализа и формирования рекомендаций."""

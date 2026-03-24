@@ -1,1 +1,1 @@
-"""Path planning algorithms package."""
+"""Пакет алгоритмов планирования траектории."""

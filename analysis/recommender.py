@@ -1,4 +1,4 @@
-"""Metrics and textual recommendations for found trajectories."""
+"""Метрики и текстовые рекомендации для найденных траекторий."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ import numpy as np
 
 
 def path_length(path: list[tuple[float, float]]) -> float:
-    """Compute polyline length."""
+    """Вычислить длину ломаной траектории."""
     if len(path) < 2:
         return 0.0
     total = 0.0
@@ -18,7 +18,7 @@ def path_length(path: list[tuple[float, float]]) -> float:
 
 
 def turn_count(path: list[tuple[float, float]], angle_threshold_deg: float = 20.0) -> int:
-    """Count turns based on direction change threshold."""
+    """Посчитать повороты по порогу изменения направления."""
     if len(path) < 3:
         return 0
     turns = 0
@@ -37,7 +37,7 @@ def turn_count(path: list[tuple[float, float]], angle_threshold_deg: float = 20.
 
 
 def min_clearance(grid: np.ndarray, path: list[tuple[float, float]]) -> float:
-    """Estimate minimum distance from path points to nearest obstacle."""
+    """Оценить минимальное расстояние от пути до препятствий."""
     obs = np.argwhere(grid == 1)
     if len(obs) == 0 or len(path) == 0:
         return float("inf")
@@ -54,7 +54,7 @@ def build_recommendation(
     speed: float,
     min_turn_radius: float,
 ) -> str:
-    """Build user-facing trajectory report."""
+    """Сформировать отчёт по траектории для пользователя."""
     length = path_length(path)
     turns = turn_count(path)
     clearance = min_clearance(grid, path)

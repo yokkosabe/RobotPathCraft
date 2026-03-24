@@ -1,4 +1,4 @@
-"""Entry point for RobotPathCraft desktop application."""
+"""Точка входа в десктопное приложение RobotPathCraft."""
 
 import sys
 import traceback
@@ -9,7 +9,7 @@ from gui.main_window import MainWindow
 
 
 def main() -> int:
-    """Start Qt application."""
+    """Запуск Qt-приложения."""
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()

@@ -1,4 +1,4 @@
-"""A* pathfinding on occupancy grid."""
+"""Поиск пути A* на сетке занятости."""
 
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ def astar_search(
     goal_radius: float = 0.0,
     step: int = 1,
 ) -> Optional[list[tuple[int, int]]]:
-    """Find path from start to goal over occupancy grid."""
+    """Найти путь от старта до цели по сетке занятости."""
     h, w = grid.shape
     if step < 1:
         step = 1
