@@ -30,11 +30,14 @@ python main.py
 
 ```json
 {
-  "width": 100,
-  "height": 100,
-  "obstacles": [[10, 20], [11, 20]],
-  "start": [5, 5],
-  "goal": [90, 90]
+	"width": 100,
+	"height": 100,
+	"obstacles": [
+		[10, 20],
+		[11, 20]
+	],
+	"start": [5, 5],
+	"goal": [90, 90]
 }
 ```
 
