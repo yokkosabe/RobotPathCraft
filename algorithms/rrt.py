@@ -1,5 +1,3 @@
-"""Поиск пути RRT в непрерывном двумерном пространстве."""
-
 from __future__ import annotations
 
 import math
